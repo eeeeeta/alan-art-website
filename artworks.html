@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<h1 class="all-artworks">
+  All artworks
+</h1>
+
+<h3 class="back-link">
+  ← back to: <a href="/">homepage</a>
+</h3>
+
+<div>
+{% for work in site.artworks %}
+<div class="row artwork awl-row">
+  <div class="col-md-6">
+    <img src="{{ work.image_base }}_300.{{ work.image_ext }}" class="painting-ind">
+  </div>
+  <div class="col-md-6 left-align"> 
+    <div class="info-text">
+      <h1><i>{{ work.title }}</i></h1>
+      {% include art-info.html %}
+      <a href="{{ work.url }}" class="more-link"><i class="fa fa-search-plus"></i>&nbsp; view this artwork in detail →</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</div>

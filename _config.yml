@@ -1,0 +1,5 @@
+title: Alan B. McKerron
+exclude: [add-artwork.sh, README.md, CNAME, classifications.txt]
+collections:
+  artworks:
+    output: true

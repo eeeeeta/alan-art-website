@@ -1,0 +1,49 @@
+{% if work.title %}
+
+{% if work.dimensions %}
+<span><i class="fa fa-cube"></i>{{ work.dimensions }}</span>
+{% else %}
+<span class="ne"><i class="fa fa-cube"></i>(dimensions unavailable)</span>
+{% endif %}
+
+{% if work.medium %}
+<span><i class="fa fa-paint-brush"></i>{{ work.medium }}</span>
+{% else %}
+<span><i class="fa fa-paint-brush"></i>oil on canvas</span>
+{% endif %}
+
+{% if work.sale %}
+<span><i class="fa fa-credit-card"></i>{{ work.sale.price }} at {{ work.sale.place }} <a href="{{ work.sale.link }}">[link]</a></span>
+{% else %}
+{% if work.sold %}
+<span class="ne"><i class="fa fa-credit-card"></i>sold</span>
+{% else %}
+<span ><i class="fa fa-credit-card"></i>price on application</span>
+{% endif %}
+{% endif %}
+
+{% else %}
+
+{% if page.dimensions %}
+<span><i class="fa fa-cube"></i>{{ page.dimensions }}</span>
+{% else %}
+<span class="ne"><i class="fa fa-cube"></i>(dimensions unavailable)</span>
+{% endif %}
+
+{% if page.medium %}
+<span><i class="fa fa-paint-brush"></i>{{ page.medium }}</span>
+{% else %}
+<span><i class="fa fa-paint-brush"></i>oil on canvas</span>
+{% endif %}
+
+{% if page.sale %}
+<span><i class="fa fa-credit-card"></i>{{ page.sale.price }} at {{ page.sale.place }} <a href="{{ page.sale.link }}">[link]</a></span>
+{% else %}
+{% if page.sold %}
+<span class="ne"><i class="fa fa-credit-card"></i>sold</span>
+{% else %}
+<span ><i class="fa fa-credit-card"></i>price on application</span>
+{% endif %}
+{% endif %}
+
+{% endif %}

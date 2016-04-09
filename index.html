@@ -1,0 +1,64 @@
+---
+layout: index 
+---
+<div class="title-main">
+  <h1>Alan B. McKerron</h1>
+  <h4>South African painter</h4>
+</div>
+<div class="bio text-unit">
+  <p>
+    <b>Alan McKerron</b> is an artist who lives in South Africa. He has had five exhibitions at various galleries
+    in the Cape, all of which have been well received.
+    His style has evolved over the years - initially involving a degree of realism, but then becoming more abstract
+    to differentiate it from photography.</p>
+  <p>
+    Alan's main influences have been de Staël, Auerbach and Richter. Taking from these, he has developed his
+    own unique style - working only in oils on canvas.
+  </p>
+  <p>
+    Alan came to painting later in life. The many countries he has visited and cultural experiences he has been exposed to, together with the magnificent surroundings of the Cape where he lives, are evident in the
+    richness of his work.
+    <a class="more-link view-cv" href="/cv.html"><i class="fa fa-user"></i>&nbsp; view cv →</a>
+  </p>
+  
+</div>
+<div class="portfolio text-unit">
+  <h4 class="style-quote">
+    <sub><i class="fa fa-quote-left qmark"></i></sub>
+    The style of painting which appeals most to me is loose, bordering on the abstract, using a lot of colour.
+    <sup><i class="fa fa-quote-right qmark"></i></sup>
+  </h4>
+  <div class="images">
+    {% for work in site.artworks %}
+    <img data-href="{{ work.url }}" src="{{ work.image_base }}_200.{{ work.image_ext }}" class="painting"></img>
+    {% endfor %}
+  </div>
+  <div class="images-spacer"></div>
+  <a href="/artworks.html" class="more-link" style="float: inherit;"><i class="fa fa-search-plus"></i>&nbsp;list of all artworks →</a>
+</div>
+<div class="more-info text-unit">
+  <div id="moreinfo-prompt">
+    <h2>click on an artwork above to view information</h2>
+    <i class="fa fa-search-plus" style="font-size: 5em;"></i>
+  </div>
+
+  {% for work in site.artworks %}
+  <div class="row artwork-row" data-href="{{ work.url }}" style="display: none;">
+    <div class="col-md-6">
+        <img src="{{ work.image_base }}_300.{{ work.image_ext }}" class="painting-ind">
+    </div>
+    <div class="col-md-6 left-align"> 
+        <div class="info-text-c info-text">
+          <h1><i>{{ work.title }}</i></h1>
+          {% include art-info.html %}
+          <a href="{{ work.url }}" class="more-link"><i class="fa fa-search-plus"></i>&nbsp;this artwork in detail →</a>
+        </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<div class="contact info-text text-unit">
+  <h2>contact information</h2>
+  <span><i class="fa fa-location-arrow"></i>Kenilworth, Cape Town, South Africa</span>
+  <span><i class="fa fa-envelope"></i>abmckerron@iafrica.com</span>
+</div>

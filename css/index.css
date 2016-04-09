@@ -1,0 +1,138 @@
+body {
+    font-family: 'Slabo 27px', serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+.title-main {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-image: url('/img/title-paint.jpg');
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+    min-height: 10em;
+    color: white;
+    text-shadow: 0em 0.2em 0.2em #000;
+}
+.title-main h1 {
+    font-size: 55px;
+    margin: 0;
+    padding-top: 0.5em;
+}
+.title-main h4 {
+    margin: 0;
+    font-weight: 200;
+    font-style: italic;
+    padding-bottom: 0.5em;
+}
+.text-unit {
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+}
+hr.adjoiner {
+    width: 20%;
+}
+.more-link {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+}
+.images-explainer {
+    color: gray;
+}
+.images-spacer {
+    height: 220px;
+}
+.view-cv {
+    float: right;
+}
+.painting {
+    height: 200px;
+    display: inline-block;
+}
+.bio {
+    border-top: 5px solid #E73333;
+    background: #bfdaff;
+}
+.images {
+    text-align: center;
+    -moz-animation: scroll-left 180s linear infinite;
+    -webkit-animation: scroll-left 180s linear infinite;
+    animation: scroll-left 180s linear infinite;
+    position: absolute;
+    white-space: nowrap;
+    height: 200px;
+}
+.contact {
+    border-top: 5px solid orangered;
+    background: beige;
+}
+.portfolio {
+    border-top: 5px solid orange;
+    background: #b6ffb6;
+    position: relative;
+    text-align: center;
+}
+.more-info {
+    border-top: 5px solid purple;
+    background: #dca9ff;
+    position: relative;
+    text-align: center;
+}
+.style-quote {
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.4em;
+}
+.painting-ind {
+    height: 300px;
+    border-radius: 5px;
+}
+#moreinfo-prompt {
+    text-align: center;
+    color: gray;
+    margin-bottom: 20px;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-text-c {
+    margin-left: 1em;
+    margin-right: 1em;
+    height: 300px;
+    top: 0px;
+    overflow: hidden;
+    padding: 5px;
+    padding-top: 2px;
+}
+
+@keyframes scroll-left {
+ 0%   { 
+ transform: translateX(0%); 		
+ }
+ 50% { 
+ transform: translateX(-50%); 
+ }
+ 100% { 
+ transform: translateX(0%); 
+ }
+}
+ul.bulletless li {
+    list-style-type: none;
+}
+.info-text span {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.info-text span i {
+    margin-right: 10px;
+}
+.info-text span.ne {
+    color: gray;
+}

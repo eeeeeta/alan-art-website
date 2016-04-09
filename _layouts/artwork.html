@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="/css/index.css" rel="stylesheet" type="text/css">
+    <link href="/css/artwork.css" rel="stylesheet" type="text/css">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <h1 class="all-artworks">
+      {{ page.title }}
+    </h1>
+
+    <h3 class="back-link">
+      ← back to: <a href="/artworks.html">all artworks</a> &middot; <a href="/">homepage</a>
+    </h3>
+
+    <div class="artwork-container">
+      <img src="{{ page.image_base }}.{{ page.image_ext }}" class="artwork-img"></img>
+    </div>
+    <div class="info-text artwork-info-text">
+      {% include art-info.html %}
+    </div>
+
+  </body>
+</html>
